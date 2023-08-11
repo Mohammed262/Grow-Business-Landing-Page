@@ -1,0 +1,343 @@
+:root{
+    --primaryColor:rgb(211, 248, 3);
+    --secondaryColor:white;
+    --thirdColor:rgba(2, 65, 117, 0.993);
+    --fourthColor:rgb(29, 27, 37);
+    --fivthColor:rgb(0, 217, 255);
+}
+
+*{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    box-sizing: border-box;
+    letter-spacing: 0mm;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -ms-user-select: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 0.3s linear forwards;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom,rgb(23,23,23,1) 0%,
+    rgb(23,23,23,0) 100%);
+    z-index: 999;
+    letter-spacing: 0.4mm !important;
+}
+
+header::before{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s;
+}
+
+.navbar-expand-lg a{   
+    color:var(--primaryColor);
+}
+
+.navbar .collapse ul li a,
+.navbar-expand-lg a span{
+    color:rgb(242, 247, 247);
+}
+
+.navbar .collapse ul li a{
+    border-left: 1px solid var(--secondaryColor);
+    opacity: 0;
+    animation: fadeInUp 0.5s linear forwards;
+    animation-delay: calc(0.3s * var(--index));
+}
+
+.navbar .collapse ul li a:hover,
+.navbar-expand-lg a:hover{
+    color:var(--primaryColor);
+}
+
+.first_Section{   
+    width: 100%;
+    min-height: 150vh;
+    background-image: url('../images/des6.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fourth_Section{
+    width: 100%;
+    min-height: 150vh;
+    background-image: url('../images/pexels-hasan-albari-1229861.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eighth_Section{
+    width: 100%;
+    min-height: 150vh;
+    background-image: url('../images/des9.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header.sticky{
+    background:var(--fourthColor);
+}
+
+.button1offirstsection{
+    color: white;
+    background-color:var(--primaryColor);
+    border: 4px solid var(--primaryColor);
+    padding: 3px;
+}
+
+.button1ofFIVTHsection{
+    color: white;
+    background-color:var(--fivthColor);
+    border: 4px solid var(--fivthColor);
+    padding: 3px;
+}
+
+.servicesFeatures{
+   margin-top: 40px;
+    height:320px;
+    }
+
+.feature1,.feature3{
+    background-color: var(--fourthColor);
+}
+
+.feature2{
+    background-color: var(--fivthColor);
+}
+
+.feature4{
+    background-color: var(--primaryColor);
+}
+
+@media (min-width:527px) and (max-width:990px){
+    .third_Section{
+        height: 1130px !important;
+    }
+}
+
+@media (min-width:445px) and (max-width:527px){
+    .third_Section{
+        height: 1100px !important;
+    }
+}
+
+@media (min-width:345px) and (max-width:445px){
+    .third_Section{
+        height: 1150px !important;   
+    }
+}
+
+@media(min-width:260px) and (max-width:345px){
+    .third_Section{
+        height: 1000px !important;
+    }
+    .third_Section .row .col-xs-12 div p{
+        font-size: 18px !important;
+    }
+}
+
+
+@media (max-width:391px){
+    .episode1 h2,.episode2 h2{
+        font-size:15px  !important;
+    }
+    .episode1 p,.episode2 p{
+        font-size:13px  !important;
+    }
+}
+
+@media(max-width:992px){
+    .sixthSection{
+        height: 3300px !important;
+    }
+}
+
+.imagesFeatures{
+    width:200px;
+    height:150px;
+    }
+
+.OurCustomers{
+    margin-top: 20px;
+}
+
+@media (max-width:350px){
+    .first_Section .container .heading h1{
+        font-size: 45px !important;
+    }
+    .first_Section .container .paragraph p{
+        font-size: 15px !important;
+    }
+}
+
+@media(min-width:348px) and (max-width:594px){
+    .fivth_Section{
+        height: 500px !important;
+    }
+}
+
+@media(max-width:348px){
+    .fivth_Section{
+        height: 550px !important;
+    }
+}
+
+@media (min-width:311px) and (max-width:350px){
+    .texts_Of_Sixth_Section{
+        height: 500px !important;
+    }
+}
+
+@media (max-width:311px){
+    .texts_Of_Sixth_Section{
+        height: 600px !important;
+    }
+}
+
+
+/*HAMBURGER TOGGLER FOR NAVBAR*/
+.hamburger-toggler{
+    display: none;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+@media (max-width:991px) {
+    .hamburger-toggler{
+        display:initial ;
+    }
+}
+
+.hamburger-toggler .hamburger-icon{
+    width: 40px;
+    height: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-icon span{
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 3px;
+    background-color: #ffffff;
+    transition:background-color 0.35s 0s ease-out;
+}
+
+.hamburger-icon span::before,
+.hamburger-icon span::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: top 0.2s 0.4s ease-out, left 0.2s 0.2s ease-out,
+    right 0.2s 0.2s ease-out, width 0.2s 0.2s ease-out, transform 0.2s ease-out;    
+}
+
+.hamburger-icon span::before{
+    top: 12px;
+    left: 20px;
+}
+
+.hamburger-icon span::after{
+    top: -12px;
+    right: 20px;
+}
+
+.hamburger-toggler.active .hamburger-icon span{
+    background-color: transparent;
+}
+
+.hamburger-toggler.active .hamburger-icon span::before,
+.hamburger-toggler.active .hamburger-icon span::after{
+    top: 0;
+    width: 40px;
+    transition: top 0.2s ease-out, left 0.2s 0.2s ease-out,
+    right 0.2s 0.2s ease-out, width 0.2s 0.2s ease-out, transform 0.2s 0.4s ease-out;   
+}
+
+.hamburger-toggler.active .hamburger-icon span::before{
+    left: 0;
+    transform: rotate3d(0,0,1,45deg);
+}
+
+.hamburger-toggler.active .hamburger-icon span::after{
+    right: 0;
+    transform: rotate3d(0,0,1,-45deg);
+}
+
+/*0000000000000000000000000000000000000000000000000000*/
+
+/*ELEMENT FADE IN*/
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeInUp {
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 100%;
+        transform: translateY(0);
+    }    
+}
+
+.first_Section .container .heading{
+    opacity: 0;
+    animation: fadeInUp 0.5s linear 1s forwards;
+}
+
+.first_Section .container .paragraph{
+    opacity: 0;
+    animation: fadeInUp 0.5s linear 1.5s forwards;
+}
+
+.first_Section .container .blueAndGreenBUttons{
+    opacity: 0;
+    animation: fadeInUp 0.5s linear 1.8s forwards;
+}
+
